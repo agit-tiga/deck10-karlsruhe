@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jobs & Karriere | DECKZEHN Rooftop Bar Karlsruhe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@100;200;300;400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="https://deckzehn.de/wp-content/uploads/2025/05/Unbenannt-1_Zeichenflaeche-1-Kopie-2-scaled-e1747770946816.png"
+         alt="DECKZEHN Logo"
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+    <span style="display:none; font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.3em; color:#EAEC19;">DECKZEHN</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#about">Über uns</a></li>
+    <li><a href="index.html#events">Events</a></li>
+    <li><a href="jobs.html" style="color:var(--yellow);">Jobs</a></li>
+    <li><a href="index.html#kontakt">Kontakt</a></li>
+  </ul>
+  <a href="index.html#kontakt" class="nav-cta">Reservieren</a>
+  <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMobile()">Home</a>
+  <a href="index.html#about" onclick="closeMobile()">Über uns</a>
+  <a href="index.html#events" onclick="closeMobile()">Events</a>
+  <a href="jobs.html" onclick="closeMobile()">Jobs</a>
+  <a href="index.html#kontakt" onclick="closeMobile()">Kontakt</a>
+</div>
+
+<!-- JOBS HERO -->
+<section class="hero" style="height:45vh; min-height:380px;">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Werde Teil des Teams</p>
+    <h1 class="hero-title">Jobs & Karriere</h1>
+    <p class="hero-subtitle-line">Über den Dächern von Karlsruhe arbeiten</p>
+    <div class="hero-divider"></div>
+  </div>
+</section>
+
+<!-- JOBS / KARRIERE -->
+<section class="jobs-section section-bg-dark" id="jobs">
+  <div class="jobs-inner">
+    <div class="jobs-header fade-in">
+      <span class="section-label">Offene Stellen</span>
+      <h2 class="section-title">Jobs & Karriere</h2>
+      <div class="gold-line" style="margin:0 auto 1.5rem;"></div>
+      <p style="font-family:var(--serif); font-size:1.05rem; font-weight:300; color:rgba(245,242,232,0.6); font-style:italic; max-width:500px; margin:0 auto;">
+        Du liebst Gastronomie, gute Vibes und Karlsruhes schönste Aussicht? Dann bewirb dich jetzt bei Deckzehn.
+      </p>
+    </div>
+
+    <div class="jobs-grid">
+      <!-- Open Positions -->
+      <div class="job-positions fade-in">
+        <p style="font-family:var(--sans); font-size:0.58rem; letter-spacing:0.42em; text-transform:uppercase; color:var(--yellow); margin-bottom:1.5rem;">Offene Stellen</p>
+
+        <div class="job-card active" onclick="selectJob(this, 'Barkeeper / Bartender')">
+          <div class="job-title">Barkeeper / Bartender</div>
+          <div class="job-type">Vollzeit · Teilzeit · Minijob</div>
+        </div>
+
+        <div class="job-card" onclick="selectJob(this, 'Servicekraft / Kellner·in')">
+          <div class="job-title">Servicekraft / Kellner·in</div>
+          <div class="job-type">Teilzeit · Aushilfe · Minijob</div>
+        </div>
+
+        <div class="job-card" onclick="selectJob(this, 'Küchenhilfe / Food Prep')">
+          <div class="job-title">Küchenhilfe / Food Prep</div>
+          <div class="job-type">Teilzeit · Minijob</div>
+        </div>
+
+        <div class="job-card" onclick="selectJob(this, 'Schichtleiter·in')">
+          <div class="job-title">Schichtleiter·in</div>
+          <div class="job-type">Vollzeit</div>
+        </div>
+
+        <div class="job-card" onclick="selectJob(this, 'Initiativbewerbung')">
+          <div class="job-title">Initiativbewerbung</div>
+          <div class="job-type">Alle Bereiche · Offen für Ideen</div>
+        </div>
+      </div>
+
+      <!-- Application Form -->
+      <div class="fade-in">
+        <div class="application-form">
+          <div id="formContent">
+            <div class="form-title">Bewerbung</div>
+            <div class="form-subtitle" id="formJobTitle">Barkeeper / Bartender</div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="fName">Vorname *</label>
+                <input class="form-input" type="text" id="fName" placeholder="Max" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="fLastName">Nachname *</label>
+                <input class="form-input" type="text" id="fLastName" placeholder="Mustermann" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="fEmail">E-Mail-Adresse *</label>
+              <input class="form-input" type="email" id="fEmail" placeholder="max@muster.de" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="fPhone">Telefon</label>
+              <input class="form-input" type="tel" id="fPhone" placeholder="+49 177 ...">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="fPosition">Gewünschte Stelle *</label>
+              <select class="form-select form-input" id="fPosition">
+                <option value="barkeeper">Barkeeper / Bartender</option>
+                <option value="service">Servicekraft / Kellner·in</option>
+                <option value="kueche">Küchenhilfe / Food Prep</option>
+                <option value="schichtleiter">Schichtleiter·in</option>
+                <option value="initiativ">Initiativbewerbung</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="fAvail">Verfügbarkeit</label>
+              <select class="form-select form-input" id="fAvail">
+                <option value="">Bitte wählen...</option>
+                <option value="vollzeit">Vollzeit</option>
+                <option value="teilzeit">Teilzeit</option>
+                <option value="minijob">Minijob / Aushilfe</option>
+                <option value="praktikum">Praktikum</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="fExp">Erfahrung & Motivation *</label>
+              <textarea class="form-textarea" id="fExp" placeholder="Erzähl uns etwas über dich — deine Erfahrungen in der Gastronomie, warum du zu Deckzehn möchtest und was dich auszeichnet..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="fStart">Frühestmöglicher Starttermin</label>
+              <input class="form-input" type="text" id="fStart" placeholder="z. B. sofort, Mai 2025...">
+            </div>
+
+            <button class="form-submit" onclick="submitApplication()">Jetzt bewerben →</button>
+
+            <p style="font-family:var(--sans); font-size:0.5rem; letter-spacing:0.1em; color:var(--muted); margin-top:1rem; text-align:center;">
+              Deine Daten werden vertraulich behandelt und ausschließlich für den Bewerbungsprozess genutzt.
+            </p>
+          </div>
+
+          <div class="form-success" id="formSuccess">
+            <div class="form-success-icon">✦</div>
+            <div class="form-success-title">Danke!</div>
+            <p class="form-success-text">Deine Bewerbung ist bei uns eingegangen.<br>Wir melden uns so bald wie möglich bei dir.</p>
+            <br>
+            <a href="index.html" class="btn-outline" style="margin-top:1.5rem;">Zurück zur Startseite</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <img class="footer-logo-img"
+           src="https://deckzehn.de/wp-content/uploads/2025/05/Unbenannt-1_Zeichenflaeche-1-Kopie-2-scaled-e1747770946816.png"
+           alt="DECKZEHN"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span style="display:none; font-family:'Bebas Neue',sans-serif; font-size:1.6rem; letter-spacing:0.3em; color:#EAEC19; margin-bottom:0.5rem; display:block;">DECKZEHN</span>
+      <span class="footer-brand-sub">Rooftop Bar · Karlsruhe</span>
+      <p class="footer-tagline">Über den Dächern der Fächerstadt — wo Aussicht, Atmosphäre und außergewöhnliche Drinks zusammenkommen.</p>
+    </div>
+
+    <div>
+      <span class="footer-col-title">Navigation</span>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">Über uns</a></li>
+        <li><a href="index.html#events">Events</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="index.html#kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <span class="footer-col-title">Öffnungszeiten</span>
+      <ul class="footer-links">
+        <li><a href="#">Mi–Do: 16–23 Uhr</a></li>
+        <li><a href="#">Fr: 15–00 Uhr</a></li>
+        <li><a href="#">Sa: 14–00 Uhr</a></li>
+        <li><a href="#">So: 15–23 Uhr</a></li>
+        <li><a href="#" style="color:rgba(245,242,232,0.18);">Mo–Di: Geschlossen</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <span class="footer-col-title">Kontakt</span>
+      <ul class="footer-links">
+        <li><a href="mailto:info@deckzehn.de">info@deckzehn.de</a></li>
+        <li><a href="https://instagram.com/deckzehn_ka" target="_blank">Instagram</a></li>
+        <li><a href="https://facebook.com/deckzehn" target="_blank">Facebook</a></li>
+        <li><a href="https://deckzehn.de/impressum" target="_blank">Impressum</a></li>
+        <li><a href="https://deckzehn.de/datenschutz" target="_blank">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 Deckzehn GmbH · Karlsruhe · Alle Rechte vorbehalten</p>
+    <div class="footer-legal">
+      <a href="https://deckzehn.de/impressum" target="_blank">Impressum</a>
+      <a href="https://deckzehn.de/datenschutz" target="_blank">Datenschutz</a>
+      <a href="#">AGB</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Sticky nav
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Hamburger
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+
+  function closeMobile() {
+    mobileMenu.classList.remove('open');
+  }
+
+  // Intersection observer for fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Job card selection
+  function selectJob(card, title) {
+    document.querySelectorAll('.job-card').forEach(c => c.classList.remove('active'));
+    card.classList.add('active');
+    document.getElementById('formJobTitle').textContent = title;
+    const pos = document.getElementById('fPosition');
+    const map = {
+      'Barkeeper / Bartender': 'barkeeper',
+      'Servicekraft / Kellner·in': 'service',
+      'Küchenhilfe / Food Prep': 'kueche',
+      'Schichtleiter·in': 'schichtleiter',
+      'Initiativbewerbung': 'initiativ'
+    };
+    if (map[title]) pos.value = map[title];
+  }
+
+  // Form submit
+  function submitApplication() {
+    const name = document.getElementById('fName').value.trim();
+    const email = document.getElementById('fEmail').value.trim();
+    const exp = document.getElementById('fExp').value.trim();
+
+    if (!name || !email || !exp) {
+      [['fName', name], ['fEmail', email], ['fExp', exp]].forEach(([id, val]) => {
+        const el = document.getElementById(id);
+        if (!val) {
+          el.style.borderColor = 'rgba(255,80,80,0.6)';
+          setTimeout(() => el.style.borderColor = '', 2000);
+        }
+      });
+      return;
+    }
+
+    document.getElementById('formContent').style.display = 'none';
+    document.getElementById('formSuccess').classList.add('visible');
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakt | DECKZEHN Rooftop Bar Karlsruhe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@100;200;300;400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<style>
+  .kontakt-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+  }
+
+  .kontakt-info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .kontakt-channel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .kontakt-channel-icon {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+    display: block;
+    color: var(--yellow);
+    opacity: 0.7;
+  }
+
+  .divider-line {
+    width: 100%;
+    height: 1px;
+    background: rgba(234,236,25,0.08);
+  }
+
+  @media (max-width: 768px) {
+    .kontakt-grid {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="https://deckzehn.de/wp-content/uploads/2025/05/Unbenannt-1_Zeichenflaeche-1-Kopie-2-scaled-e1747770946816.png"
+         alt="DECKZEHN Logo"
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+    <span style="display:none; font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.3em; color:#EAEC19;">DECKZEHN</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#about">Über uns</a></li>
+    <li><a href="index.html#events">Events</a></li>
+    <li><a href="jobs.html">Jobs</a></li>
+    <li><a href="kontakt.html" style="color:var(--yellow);">Kontakt</a></li>
+  </ul>
+  <a href="kontakt.html" class="nav-cta">Reservieren</a>
+  <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMobile()">Home</a>
+  <a href="index.html#about" onclick="closeMobile()">Über uns</a>
+  <a href="index.html#events" onclick="closeMobile()">Events</a>
+  <a href="jobs.html" onclick="closeMobile()">Jobs</a>
+  <a href="kontakt.html" onclick="closeMobile()">Kontakt</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" style="height:45vh; min-height:380px;">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Wir freuen uns von euch zu hören</p>
+    <h1 class="hero-title">Kontakt</h1>
+    <p class="hero-subtitle-line">Reservierungen · Anfragen · Events</p>
+    <div class="hero-divider"></div>
+  </div>
+</section>
+
+<!-- KONTAKT HAUPTBEREICH -->
+<section class="hours-section section-bg-dark">
+  <div class="kontakt-grid">
+
+    <!-- LINKE SPALTE: Kontaktmöglichkeiten -->
+    <div class="kontakt-info-block fade-in">
+      <div>
+        <span class="section-label">So erreicht ihr uns</span>
+        <h2 class="section-title">Kontakt</h2>
+        <div class="gold-line"></div>
+      </div>
+
+      <div class="kontakt-channel">
+        <span class="contact-label">Allgemeine Anfragen</span>
+        <a href="mailto:info@deckzehn.de" class="contact-value">info@deckzehn.de</a>
+      </div>
+
+      <div class="divider-line"></div>
+
+      <div class="kontakt-channel">
+        <span class="contact-label">Reservierungen & Tischbuchung</span>
+        <a href="mailto:reservierung@deckzehn.de" class="contact-value">reservierung@deckzehn.de</a>
+        <p style="font-family:var(--serif); font-size:0.88rem; font-weight:300; color:var(--muted); margin-top:0.4rem; line-height:1.7;">
+          Oder einfach das Formular nutzen — wir antworten innerhalb von 24 Stunden.
+        </p>
+      </div>
+
+      <div class="divider-line"></div>
+
+      <div class="kontakt-channel">
+        <span class="contact-label">Private Events & Firmenanfragen</span>
+        <a href="mailto:events@deckzehn.de" class="contact-value">events@deckzehn.de</a>
+        <p style="font-family:var(--serif); font-size:0.88rem; font-weight:300; color:var(--muted); margin-top:0.4rem; line-height:1.7;">
+          Geburtstage, Hochzeiten, Firmenevents — wir planen euren besonderen Abend.
+        </p>
+      </div>
+
+      <div class="divider-line"></div>
+
+      <div class="kontakt-channel">
+        <span class="contact-label">Social Media</span>
+        <div class="social-links" style="margin-top:0.2rem;">
+          <a href="https://www.instagram.com/deckzehn?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-link">Instagram</a>
+          <a href="https://facebook.com/deckzehn" target="_blank" class="social-link">Facebook</a>
+          <a href="https://tiktok.com/@deckzehn" target="_blank" class="social-link">TikTok</a>
+        </div>
+      </div>
+
+      <div class="divider-line"></div>
+
+      <div class="kontakt-channel">
+        <span class="contact-label">Öffnungszeiten</span>
+        <table class="hours-table" style="margin-top:0.5rem;">
+          <tr><td>Montag – Dienstag</td><td class="closed" style="text-align:right;">Geschlossen</td></tr>
+          <tr><td>Mittwoch – Donnerstag</td><td style="text-align:right;">16:00 – 23:00</td></tr>
+          <tr><td>Freitag</td><td style="text-align:right;">15:00 – 00:00</td></tr>
+          <tr><td>Samstag</td><td style="text-align:right;">14:00 – 00:00</td></tr>
+          <tr><td>Sonntag</td><td style="text-align:right;">15:00 – 23:00</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- RECHTE SPALTE: Kontaktformular -->
+    <div class="fade-in">
+      <div class="application-form">
+        <div id="formContent">
+          <div class="form-title">Schreibt uns</div>
+          <div class="form-subtitle">Reservierung, Anfrage oder einfach Hallo</div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="cName">Vorname *</label>
+              <input class="form-input" type="text" id="cName" placeholder="Max" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cLastName">Nachname *</label>
+              <input class="form-input" type="text" id="cLastName" placeholder="Mustermann" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cEmail">E-Mail-Adresse *</label>
+            <input class="form-input" type="email" id="cEmail" placeholder="max@muster.de" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cPhone">Telefon</label>
+            <input class="form-input" type="tel" id="cPhone" placeholder="+49 177 ...">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cTopic">Betreff *</label>
+            <select class="form-select form-input" id="cTopic">
+              <option value="">Bitte wählen...</option>
+              <option value="reservierung">Tischreservierung</option>
+              <option value="event">Private Event-Anfrage</option>
+              <option value="firmenevent">Firmenevent</option>
+              <option value="allgemein">Allgemeine Frage</option>
+              <option value="sonstiges">Sonstiges</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cDate">Gewünschtes Datum / Zeitraum</label>
+            <input class="form-input" type="text" id="cDate" placeholder="z. B. Fr, 18. April 2025 · ab 19 Uhr">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cGuests">Personenanzahl</label>
+            <input class="form-input" type="text" id="cGuests" placeholder="z. B. 4 Personen">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cMessage">Nachricht *</label>
+            <textarea class="form-textarea" id="cMessage" placeholder="Wie können wir euch helfen? Teilt uns alle wichtigen Details mit..."></textarea>
+          </div>
+
+          <button class="form-submit" onclick="submitContact()">Nachricht senden →</button>
+
+          <p style="font-family:var(--sans); font-size:0.5rem; letter-spacing:0.1em; color:var(--muted); margin-top:1rem; text-align:center;">
+            Deine Daten werden vertraulich behandelt. Wir melden uns innerhalb von 24 Stunden.
+          </p>
+        </div>
+
+        <div class="form-success" id="formSuccess">
+          <div class="form-success-icon">✦</div>
+          <div class="form-success-title">Vielen Dank!</div>
+          <p class="form-success-text">Deine Nachricht ist bei uns eingegangen.<br>Wir antworten innerhalb von 24 Stunden.</p>
+          <br>
+          <a href="index.html" class="btn-outline" style="margin-top:1.5rem;">Zurück zur Startseite</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <img class="footer-logo-img"
+           src="https://deckzehn.de/wp-content/uploads/2025/05/Unbenannt-1_Zeichenflaeche-1-Kopie-2-scaled-e1747770946816.png"
+           alt="DECKZEHN"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <span style="display:none; font-family:'Bebas Neue',sans-serif; font-size:1.6rem; letter-spacing:0.3em; color:#EAEC19; margin-bottom:0.5rem; display:block;">DECKZEHN</span>
+      <span class="footer-brand-sub">Rooftop Bar · Karlsruhe</span>
+      <p class="footer-tagline">Über den Dächern der Fächerstadt — wo Aussicht, Atmosphäre und außergewöhnliche Drinks zusammenkommen.</p>
+    </div>
+
+    <div>
+      <span class="footer-col-title">Navigation</span>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">Über uns</a></li>
+        <li><a href="index.html#events">Events</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <span class="footer-col-title">Öffnungszeiten</span>
+      <ul class="footer-links">
+        <li><a href="#">Mi–Do: 16–23 Uhr</a></li>
+        <li><a href="#">Fr: 15–00 Uhr</a></li>
+        <li><a href="#">Sa: 14–00 Uhr</a></li>
+        <li><a href="#">So: 15–23 Uhr</a></li>
+        <li><a href="#" style="color:rgba(245,242,232,0.18);">Mo–Di: Geschlossen</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <span class="footer-col-title">Kontakt</span>
+      <ul class="footer-links">
+        <li><a href="mailto:info@deckzehn.de">info@deckzehn.de</a></li>
+        <li><a href="https://instagram.com/deckzehn_ka" target="_blank">Instagram</a></li>
+        <li><a href="https://facebook.com/deckzehn" target="_blank">Facebook</a></li>
+        <li><a href="https://deckzehn.de/impressum" target="_blank">Impressum</a></li>
+        <li><a href="https://deckzehn.de/datenschutz" target="_blank">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 Deckzehn GmbH · Karlsruhe · Alle Rechte vorbehalten</p>
+    <div class="footer-legal">
+      <a href="https://deckzehn.de/impressum" target="_blank">Impressum</a>
+      <a href="https://deckzehn.de/datenschutz" target="_blank">Datenschutz</a>
+      <a href="#">AGB</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+
+  function closeMobile() {
+    mobileMenu.classList.remove('open');
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  function submitContact() {
+    const name = document.getElementById('cName').value.trim();
+    const email = document.getElementById('cEmail').value.trim();
+    const topic = document.getElementById('cTopic').value;
+    const message = document.getElementById('cMessage').value.trim();
+
+    if (!name || !email || !topic || !message) {
+      [['cName', name], ['cEmail', email], ['cTopic', topic], ['cMessage', message]].forEach(([id, val]) => {
+        const el = document.getElementById(id);
+        if (!val) {
+          el.style.borderColor = 'rgba(255,80,80,0.6)';
+          setTimeout(() => el.style.borderColor = '', 2000);
+        }
+      });
+      return;
+    }
+
+    document.getElementById('formContent').style.display = 'none';
+    document.getElementById('formSuccess').classList.add('visible');
+  }
+</script>
+</body>
+</html>
