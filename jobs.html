@@ -272,8 +272,89 @@
       'Schichtleiter·in': 'schichtleiter',
       'Initiativbewerbung': 'initiativ'
     };
-    if (map[title]) pos.value = map[title];
+    if (map[title]) {
+      pos.value = map[title];
+      updateCustomSelect(pos);
+    }
   }
+
+  // Custom select init
+  function initCustomSelects() {
+    document.querySelectorAll('.form-select').forEach(select => {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'cs-wrapper';
+      select.parentNode.insertBefore(wrapper, select);
+      wrapper.appendChild(select);
+
+      const options = Array.from(select.options);
+      const selOpt = options[select.selectedIndex];
+      const isPlaceholder = !selOpt.value;
+
+      const trigger = document.createElement('div');
+      trigger.className = 'cs-trigger';
+      trigger.setAttribute('tabindex', '0');
+      trigger.innerHTML = `<span class="cs-trigger-label${isPlaceholder ? ' cs-placeholder' : ''}">${selOpt.text}</span><span class="cs-arrow"></span>`;
+
+      const panel = document.createElement('div');
+      panel.className = 'cs-panel';
+
+      options.forEach(opt => {
+        if (!opt.value) return;
+        const item = document.createElement('div');
+        item.className = 'cs-option' + (opt.value === select.value ? ' selected' : '');
+        item.dataset.value = opt.value;
+        item.textContent = opt.text;
+        item.addEventListener('click', e => {
+          e.stopPropagation();
+          select.value = opt.value;
+          const lbl = trigger.querySelector('.cs-trigger-label');
+          lbl.textContent = opt.text;
+          lbl.classList.remove('cs-placeholder');
+          panel.querySelectorAll('.cs-option').forEach(o => o.classList.remove('selected'));
+          item.classList.add('selected');
+          trigger.classList.remove('open');
+          panel.classList.remove('open');
+        });
+        panel.appendChild(item);
+      });
+
+      trigger.addEventListener('click', e => {
+        e.stopPropagation();
+        const willOpen = !panel.classList.contains('open');
+        document.querySelectorAll('.cs-panel').forEach(p => p.classList.remove('open'));
+        document.querySelectorAll('.cs-trigger').forEach(t => t.classList.remove('open'));
+        if (willOpen) { trigger.classList.add('open'); panel.classList.add('open'); }
+      });
+
+      trigger.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); trigger.click(); }
+      });
+
+      select._csTrigger = trigger;
+      select._csPanel = panel;
+      wrapper.appendChild(trigger);
+      wrapper.appendChild(panel);
+    });
+
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.cs-panel').forEach(p => p.classList.remove('open'));
+      document.querySelectorAll('.cs-trigger').forEach(t => t.classList.remove('open'));
+    });
+  }
+
+  function updateCustomSelect(select) {
+    if (!select._csTrigger) return;
+    const opt = select.options[select.selectedIndex];
+    const lbl = select._csTrigger.querySelector('.cs-trigger-label');
+    if (lbl) { lbl.textContent = opt.text; lbl.classList.toggle('cs-placeholder', !opt.value); }
+    if (select._csPanel) {
+      select._csPanel.querySelectorAll('.cs-option').forEach(o => {
+        o.classList.toggle('selected', o.dataset.value === select.value);
+      });
+    }
+  }
+
+  initCustomSelects();
 
   // Form submit
   function submitApplication() {
